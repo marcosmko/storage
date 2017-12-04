@@ -122,7 +122,7 @@ namespace TwentyTwenty.Storage.Google
         {
             try
             {
-                _storageService.ListObjectsAsync(_bucket, containerName, new ListObjectsOptions { }
+                _storageService.ListObjectsAsync(_bucket, containerName, new ListObjectsOptions { });
                 return (await GetListBlobsRequest(containerName).ExecuteAsync()).Items.SelectToListOrEmpty(GetBlobDescriptor);
             }
             catch (GoogleApiException gae)

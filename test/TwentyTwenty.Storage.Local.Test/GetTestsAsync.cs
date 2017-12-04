@@ -38,11 +38,11 @@ namespace TwentyTwenty.Storage.Local.Test
             var descriptor = await _provider.GetBlobDescriptorAsync(container, blobName);
 
             Assert.Equal(descriptor.Container, container);
-            Assert.Equal(descriptor.ContentType, "application/json");
+            Assert.Equal("application/json", descriptor.ContentType);
             Assert.NotNull(descriptor.LastModified);
             Assert.Equal(descriptor.Length, datalength);
             Assert.Equal(descriptor.Name, blobName);
-            Assert.Equal(descriptor.Security, BlobSecurity.Private);
+            Assert.Equal(BlobSecurity.Private, descriptor.Security);
         }
 
         [Fact]
@@ -63,7 +63,7 @@ namespace TwentyTwenty.Storage.Local.Test
                 Assert.NotNull(descriptor.LastModified);
                 Assert.Equal(descriptor.Length, blob.Length);
                 Assert.Equal(descriptor.Name, blob.Name);
-                Assert.Equal(descriptor.Security, BlobSecurity.Private);
+                Assert.Equal(BlobSecurity.Private, descriptor.Security);
             }
         }
     }
