@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Description>TwentyTwenty.Storage.Google.Test Class Library</Description>
     <Authors>2020IP</Authors>
-    <TargetFramework>net46</TargetFramework>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
     <AssemblyName>TwentyTwenty.Storage.Google.Test</AssemblyName>
     <PackageId>TwentyTwenty.Storage.Google.Test</PackageId>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
